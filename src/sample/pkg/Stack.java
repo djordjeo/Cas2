@@ -65,8 +65,10 @@ public class Stack {
 
     @Override
     public String toString() {
-        return "Stack{" +
-                "elements=" + Arrays.toString(elements) + "}" + "\n" +
-                "size: " + size() + " capacity: " + capacity();
+        final StringBuilder sb = new StringBuilder("Stack{");
+        sb.append("elements=").append(Arrays.toString(elements));
+        sb.append(", head=").append(head);
+        sb.append('}');
+        return sb.toString();
     }
 }
